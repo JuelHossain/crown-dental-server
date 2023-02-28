@@ -10,5 +10,8 @@
   "parserOptions": {
     "ecmaVersion": "latest"
   },
-  "rules": {}
+  "rules": {
+    "consistent-return": "off",
+    "no-nested-ternary": "off"
+  }
 }

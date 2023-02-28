@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const client = require("./db/client");
-const { serviceRouter, reviewsRouter, usersRouter } = require("./routers");
+const { serviceRouter, reviewsRouter, usersRouter, appointmentsRouter } = require("./routers");
 const { getServiceCount } = require("./controller/servicesController");
 const { getReviewCount } = require("./controller/reviewsController");
 
@@ -18,6 +18,7 @@ app.use(express.json());
     app.use("/users", usersRouter);
     app.use("/services", serviceRouter);
     app.use("/reviews", reviewsRouter);
+    app.use("/appointments", appointmentsRouter);
     app.get("/serviceCount", getServiceCount);
     app.get("/reviewCount", getReviewCount);
   } catch (err) {
