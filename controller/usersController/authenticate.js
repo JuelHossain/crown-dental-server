@@ -1,5 +1,5 @@
-const { usersCollection } = require("../../db/collections");
 const jwt = require("jsonwebtoken");
+const { usersCollection } = require("../../db/collections");
 
 const authenticate = async (req, res) => {
   try {
